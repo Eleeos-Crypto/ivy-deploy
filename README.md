@@ -6,7 +6,7 @@
 3. Fill in the network, your operator ID, and operator key. On the testnet and previewnet, this can be found by going to https://portal.hedera.com/register
 
 ## Hedera Smart Contract Service Interactions
-### Deploy a smart contract using a truffle file:
+### Deploy a smart contract using a truffle file (must not have parameters in constructor):
 ```
 go run ivy.go --config config.yaml deploy --truffle ~/workspace/truffle-project/build/contracts/contract.json --out deployment.json
 ```
