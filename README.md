@@ -20,6 +20,11 @@ go run ivy.go --config config.yaml transfer --account 0.0.34806395 --tinybar 400
 
 Note: HBAR or TINYBAR must be present with a nonzero integer. If both are present, HBAR amount will be used.
 
+### Get the Balance of an Account
+```
+go run ivy.go --config config.yaml balance --account 0.0.34818022
+```
+
 ### Create Accounts
 Create a set of accounts to test with using the following command
 ```
@@ -34,4 +39,11 @@ The `out` file will contain aarray of accounts with Account IDs and private keys
 go run ivy.go --config config.yaml deploy --truffle ~/workspace/truffle-project/build/contracts/contract.json --out deployment.json
 ```
 The deployment.json will then contain the contract ID, fees paid during deployment, and the solidity address for the contract
+
+### Get a Smart Contract's Info
+```
+go run ivy.go --config config.yaml contract-info --contract 0.0.34806395 --out contract-info.json
+````
+
+Where `out` is the json file that the smart contract info will be written to
 
