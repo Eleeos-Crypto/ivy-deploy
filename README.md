@@ -20,6 +20,14 @@ go run ivy.go --config config.yaml transfer --account 0.0.34806395 --tinybar 400
 
 Note: HBAR or TINYBAR must be present with a nonzero integer. If both are present, HBAR amount will be used.
 
+### Create Accounts
+Create a set of accounts to test with using the following command
+```
+go run ivy.go --config config.yaml create-accounts --count 5 --out test.json
+```
+
+The `out` file will contain aarray of accounts with Account IDs and private keys
+
 ## Hedera Smart Contract Service Interactions
 ### Deploy a smart contract using a truffle file (must not have parameters in constructor):
 ```
