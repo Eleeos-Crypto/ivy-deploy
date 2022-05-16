@@ -20,10 +20,10 @@ var (
 
 func init() {
 	rootCmd.AddCommand(transferCmd)
-	rootCmd.PersistentFlags().StringVar(&account, "account", "", "The account to fund in the form <shard>.<realm>.<account #>")
-	rootCmd.PersistentFlags().StringVar(&memo, "memo", "", "Memo for the transaction")
-	rootCmd.PersistentFlags().Int64Var(&hbar, "hbar", 0, "The amount in HBAR to send")
-	rootCmd.PersistentFlags().Int64Var(&tinybar, "tinybar", 0, "The amount in tiny bar to send")
+	transferCmd.PersistentFlags().StringVar(&account, "account", "", "The account to fund in the form <shard>.<realm>.<account #>")
+	transferCmd.PersistentFlags().StringVar(&memo, "memo", "", "Memo for the transaction")
+	transferCmd.PersistentFlags().Int64Var(&hbar, "hbar", 0, "The amount in HBAR to send")
+	transferCmd.PersistentFlags().Int64Var(&tinybar, "tinybar", 0, "The amount in tiny bar to send")
 }
 
 var transferCmd = &cobra.Command{

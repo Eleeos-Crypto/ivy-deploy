@@ -24,10 +24,10 @@ var (
 
 func init() {
 	rootCmd.AddCommand(deployCmd)
-	rootCmd.PersistentFlags().StringVar(&truffleFile, "truffle", "", "The truffle file to deploy from")
-	rootCmd.PersistentFlags().StringVar(&contractOutFile, "out", "", "The file to save the smart contract info in")
-	rootCmd.PersistentFlags().Uint64Var(&gasAmount, "gas", 1000000, "The amount of gas to use in the transaction")
-	rootCmd.PersistentFlags().Int64Var(&maxFee, "maxFee", hedera.NewHbar(5).AsTinybar(), "The max amount to pay for the fee")
+	deployCmd.PersistentFlags().StringVar(&truffleFile, "truffle", "", "The truffle file to deploy from")
+	deployCmd.PersistentFlags().StringVar(&contractOutFile, "out", "", "The file to save the smart contract info in")
+	deployCmd.PersistentFlags().Uint64Var(&gasAmount, "gas", 1000000, "The amount of gas to use in the transaction")
+	deployCmd.PersistentFlags().Int64Var(&maxFee, "maxFee", hedera.NewHbar(5).AsTinybar(), "The max amount to pay for the fee")
 }
 
 var deployCmd = &cobra.Command{
